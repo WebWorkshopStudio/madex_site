@@ -261,7 +261,7 @@ input::placeholder {
 
 input:hover, textarea:hover, button:hover {
     outline: none;
-    background: white;
+    background: #FEFEFE;
     color: #3A312D;
 }
 

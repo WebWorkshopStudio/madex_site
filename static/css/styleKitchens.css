@@ -1,0 +1,77 @@
+.href__main {
+    margin: 40px 0;
+    flex-direction: row;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.href__main a {
+    text-decoration: none;
+    list-style: none;
+    color: #3A312D;
+}
+
+.href__main a:hover {
+    color: #908E8E;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.text2 {
+    line-height: 22px;
+    max-width: 1100px;
+    margin-bottom: 90px;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(transparent 0%, rgba(58, 49, 45, 0.7) 0), url("../img/kitchens/sort.png") no-repeat center/cover;
+    margin-bottom: 90px;
+}
+
+.sort_button {
+    padding: 15px 0;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.href__sort_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    padding: 15px 0;
+    border: 1px solid #FEFEFE;
+    text-decoration: none;
+    color: #FEFEFE;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.href__sort_button:hover {
+    color: #3A312D;
+    background: rgba(254, 254, 254, 0.7);
+    border: none;
+}
+
+.sort__kitchens_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 60px;
+    column-gap: 60px;
+    margin-bottom: 90px;
+}
