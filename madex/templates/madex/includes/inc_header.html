@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <title>main</title>
     <link rel="stylesheet" href={% static "css/style.css" %}>
+    <link rel="stylesheet" href={% static "css/styleKitchens.css" %}>
+    <link rel="stylesheet" href={% static "css/styleFurniture.css" %}>
 </head>
 <body>
 <section class="main_header">
     <header class="header">
         <div class="container container_header">
-            <div class="logo">
+            <div class="logo" id="logo">
                 <a href="index.html">
                     <svg width="223" height="50" viewBox="0 0 223 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -86,7 +88,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="menu_link" href="projects.html">
+                        <a class="menu_link" href="#contacts">
                             Контакты
                         </a>
                     </li>
