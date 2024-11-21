@@ -1,0 +1,15 @@
+.furniture {
+    column-gap: 10px;
+    row-gap: 30px;
+    font-size: 0;
+}
+
+.furniture__button {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 380px;
+}
+
+.furniture__button_text {
+    height: 66px;
+}
