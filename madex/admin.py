@@ -13,6 +13,7 @@ class ProductImageInline(admin.TabularInline):
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         "title",
+        "image",
         "style",
         "facade_material",
         "body_material",

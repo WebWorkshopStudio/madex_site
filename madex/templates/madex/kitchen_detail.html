@@ -1,0 +1,18 @@
+{% extends 'madex/base.html' %}
+{% load static %}
+{% load my_tags %}
+{% block content %}
+<div class="kitchens">
+    {% for image in galery %}
+    <img src="{{ image.image|mymedia }}" alt="galery">
+    {% endfor %}
+    <a class="services__sections_button" href="#">
+        {{ kitchen.title }}
+        <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
+                fill="#3A312D"/>
+        </svg>
+    </a>
+</div>
+
+{% endblock %}

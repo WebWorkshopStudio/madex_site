@@ -1,5 +1,6 @@
 {% extends 'madex/base.html' %}
 {% load static %}
+{% load my_tags %}
 {% block content %}
     <section class="href">
         <div class="container_block">
@@ -8,7 +9,7 @@
                 <svg width="5" height="12" viewBox="0 0 5 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.992 0.48L1.92 12H0.96L4.032 0.48H4.992Z" fill="#3A312D"/>
                 </svg>
-                <a href="{}">&nbsp;Кухни</a>
+                <a href="{% url "madex:all_kitchens" %}">&nbsp;Кухни</a>
             </div>
             <div class="title">
                 Кухни
@@ -23,9 +24,9 @@
     <sections class="sort">
         <div class="container_block">
             <div class="sort_button">
-                <a class="href__sort_button" href="#">все</a>
-                <a class="href__sort_button" href="#"> Современные кухни</a>
-                <a class="href__sort_button" href="#">Классические кухни</a>
+                <a class="href__sort_button" href="{% url "madex:all_kitchens" %}">все</a>
+                <a class="href__sort_button" href="{% url  "madex:modern_kitchens" %}"> Современные кухни</a>
+                <a class="href__sort_button" href="{% url "madex:classic_kitchens" %}">Классические кухни</a>
             </div>
         </div>
     </sections>
@@ -33,90 +34,18 @@
     <sections class="kitchens_items">
         <div class="container_block">
             <div class="sort__kitchens_items">
-                <!--            Первая карточка-->
+                {% for kitchen in kitchens %}
                 <div class="kitchens">
-                    <img src={% static "img/kitchens/1.png" %} alt="kitchens">
-                    <a class="services__sections_button" href="#">
-                        Wave
+                    <img src="{{ kitchen.image|mymedia }}" alt="kitchens">
+                    <a class="services__sections_button" href="{% url "madex:kitchen_detail" kitchen.pk %}">
+                        {{ kitchen.title }}
                         <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
                                 fill="#3A312D"/>
                         </svg>
                     </a>
                 </div>
-                <!--            Конец карточки-->
-                <!--            2-->
-                <div class="kitchens">
-                    <img src={% static "img/kitchens/2.png" %} alt="kitchens">
-                    <a class="services__sections_button" href="#">
-                        Versailles
-                        <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
-                                fill="#3A312D"/>
-                        </svg>
-                    </a>
-                </div>
-                <!--            end 2-->
-                <div class="kitchens">
-                    <img src={% static "img/kitchens/3.png" %} alt="kitchens">
-                    <a class="services__sections_button" href="#">
-                        White Night
-                        <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
-                                fill="#3A312D"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="kitchens">
-                    <img src={% static "img/kitchens/4.png" %} alt="kitchens">
-                    <a class="services__sections_button" href="#">
-                        Lines
-                        <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
-                                fill="#3A312D"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="kitchens">
-                    <img src={% static "img/kitchens/4.png" %} alt="kitchens">
-                    <a class="services__sections_button" href="#">
-                        Classic Edge
-                        <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
-                                fill="#3A312D"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="kitchens">
-                    <img src={% static "img/kitchens/6.png" %} alt="kitchens">
-                    <a class="services__sections_button" href="#">
-                        Versailles
-                        <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
-                                fill="#3A312D"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="kitchens">
-                    <img src={% static "img/kitchens/7.png" %} alt="kitchens">
-                    <a class="services__sections_button" href="#">
-                        Vogue
-                        <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
-                                fill="#3A312D"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="kitchens">
-                    <img src={% static "img/kitchens/8.png" %} alt="kitchens">
-                    <a class="services__sections_button" href="#">
-                        Light
-                        <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
-                                fill="#3A312D"/>
-                        </svg>
-                    </a>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </sections>

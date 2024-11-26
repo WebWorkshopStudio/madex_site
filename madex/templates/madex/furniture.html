@@ -1,10 +1,10 @@
 {% extends "madex/base.html" %}
 {% block content %}
-
+{% load static %}
 <section class="href">
     <div class="container_block">
         <div class="href__main">
-            <a href="index.html">Главная&nbsp;</a>
+            <a href="{% url "madex:main" %}">Главная&nbsp;</a>
             <svg width="5" height="12" viewBox="0 0 5 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.992 0.48L1.92 12H0.96L4.032 0.48H4.992Z" fill="#3A312D"/>
             </svg>
@@ -41,7 +41,7 @@
             <!--            Конец карточки-->
             <!--            2-->
             <div class="kitchens">
-                <img src="img/furniture/2.png" alt="kitchens">
+                <img src={% static 'img/furniture/2.png' %} alt="kitchens">
                 <a class="services__sections_button furniture__button" href="/kitchens.html">
                     <div class="furniture__button_text">
                         Современный шкаф для девочки
@@ -57,7 +57,7 @@
             </div>
             <!--            end 2-->
             <div class="kitchens">
-                <img src="img/furniture/3.png" alt="kitchens">
+                <img src={% static 'img/furniture/3.png' %} alt="kitchens">
                 <a class="services__sections_button furniture__button" href="/kitchens.html">
                     <div class="furniture__button_text">
                         Современная мебель для гостиной
@@ -72,7 +72,7 @@
                 </a>
             </div>
             <div class="kitchens">
-                <img src="img/furniture/4.png" alt="kitchens">
+                <img src={% static 'img/furniture/4.png' %} alt="kitchens">
                 <a class="services__sections_button furniture__button" href="/kitchens.html">
                     <div class="furniture__button_text">
                         Классический шкаф из массива берёзы
@@ -87,7 +87,7 @@
                 </a>
             </div>
             <div class="kitchens">
-                <img src="img/furniture/5.png" alt="kitchens">
+                <img src={% static 'img/furniture/5.png' %} alt="kitchens">
                 <a class="services__sections_button furniture__button" href="/kitchens.html">
                     <div class="furniture__button_text">
                         Шкаф с раздвижными фасадами
@@ -102,7 +102,7 @@
                 </a>
             </div>
             <div class="kitchens">
-                <img src="img/furniture/6.png" alt="kitchens">
+                <img src={% static "img/furniture/6.png" %} alt="kitchens">
                 <a class="services__sections_button furniture__button" href="/kitchens.html">
                     <div class="furniture__button_text">
                         Современная мебель для ванных комнат
