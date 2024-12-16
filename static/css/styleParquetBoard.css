@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Vela Sans - 300';
+    src: url("../fonts/VelaSans-Light.ttf");
+}
+
+.text3 {
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.list_advantages::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #3A312D;
+    margin-right: 8px;
+}
+
+.price {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.positioning_relative {
+    position: relative;
+    padding-left: 8px;
+    margin-bottom: 180px;
+    z-index: -1;
+}
+
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.boards__items {
+    margin-top: 90px;
+    margin-bottom: 130px;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 47px;
+    height: 100%;
+    font-family: 'Vela Sans - 300', sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 33px;
+    color: #3A312D;
+    transition: all .5s;
+}
+
+.boards__item_text {
+    padding: 15px 0;
+}
+
+.boards__item:hover > img {
+    box-shadow: 0 0 8px #3A312D;
+    /*transform: scale(1.1);*/
+}

@@ -1,0 +1,32 @@
+@media screen and (max-width: 1375px) {
+    .phone {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .main__info_text {
+        margin-bottom: 86px;
+    }
+}
+
+@media screen and (max-width: 1329px) {
+    .main__info_text {
+        margin-bottom: 0;
+    }
+
+    .about_us__info {
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 1309px) {
+    .main__info {
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width: 1299px) {
+
+}

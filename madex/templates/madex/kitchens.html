@@ -2,78 +2,168 @@
 {% load static %}
 {% load my_tags %}
 {% block content %}
-    <section class="href">
-        <div class="container_block">
-            <div class="href__main">
-                <a href={% url 'madex:main' %}>Главная&nbsp;</a>
-                <svg width="5" height="12" viewBox="0 0 5 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.992 0.48L1.92 12H0.96L4.032 0.48H4.992Z" fill="#3A312D"/>
-                </svg>
-                <a href="{% url "madex:all_kitchens" %}">&nbsp;Кухни</a>
-            </div>
-            <div class="title">
-                Кухни
-            </div>
-            <div class="text2">
-                У нас вы найдете широкий ассортимент — от классики до современных трендов.<br>
-                Наша команда профессионалов поможет подобрать идеальные решения, учитывая все ваши пожелания и стиль
-                интерьера.
-            </div>
+<head>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+ 
+    <link rel="stylesheet" href={% static "css/styleKitchens2.css" %}>
+</head>
+<section class="href">
+    <div class="container_block">
+        <div class="href__main">
+            <a href={% url "madex:main" %}>Главная&nbsp;</a>
+            <svg width="5" height="12" viewBox="0 0 5 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.992 0.48L1.92 12H0.96L4.032 0.48H4.992Z" fill="#3A312D"/>
+            </svg>
+            <a href={% url "madex:all_kitchens" %}>&nbsp;Кухни</a>
         </div>
-    </section>
-    <sections class="sort">
-        <div class="container_block">
-            <div class="sort_button">
-                <a class="href__sort_button" href="{% url "madex:all_kitchens" %}">все</a>
-                <a class="href__sort_button" href="{% url  "madex:modern_kitchens" %}"> Современные кухни</a>
-                <a class="href__sort_button" href="{% url "madex:classic_kitchens" %}">Классические кухни</a>
-            </div>
+        <div class="title">
+            Кухни
         </div>
-    </sections>
-    <!--Секция карточек товара-->
-    <sections class="kitchens_items">
+        <div class="text2">
+            У нас вы найдете широкий ассортимент — от классики до современных трендов.<br>
+            Наша команда профессионалов поможет подобрать идеальные решения, учитывая все ваши пожелания и стиль
+            интерьера.
+        </div>
+    </div>
+</section>
+<section class="sort">
+    <div class="container_block">
+        <div class="sort_button">
+            <a class="btn href__sort_button active" href={% url "madex:all_kitchens" %} id="btn_oll">все</a>
+            <a class="btn href__sort_button " href={% url "madex:modern_kitchens" %} id="btn_modern"> Современные кухни</a>
+            <a class="btn href__sort_button " href={% url "madex:classic_kitchens" %} id="btn_classic">Классические кухни</a>
+        </div>
+    </div>
+</section>
+<section class="kitchens_items">
         <div class="container_block">
             <div class="sort__kitchens_items">
+                <!-- Первая карточка -->
                 {% for kitchen in kitchens %}
-                <div class="kitchens">
+                <div class="kitchens" data-product-id='{{ kitchen.pk }}'>
                     <img src="{{ kitchen.image|mymedia }}" alt="kitchens">
-                    <a class="services__sections_button" href="{% url "madex:kitchen_detail" kitchen.pk %}">
+                    <div class="services__sections_button">
                         {{ kitchen.title }}
                         <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
-                                fill="#3A312D"/>
+                                  fill="#3A312D"/>
                         </svg>
-                    </a>
+                    </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
-    </sections>
+    </section>
     <!--Конец секции с карточками-->
-    <!--footer-->
-    <section class="form">
-        <div class="form__title">
-            Оставьте заявку для личной консультации
-        </div>
-        <div class="form1">
-            <form action="https://webhook.site/3f8522b7-9cd0-4537-9858-110d8bc5cec0" method="post">
-                <div class="input_info">
-                    <label>
-                        <input type="text" name="name" placeholder="Введите имя">
-                    </label>
-                    <label>
-                        <input type="tel" name="phone" placeholder="Введите телефон">
-                    </label>
+    <section class="pagination">
+        <div class="container_block">
+            <div class="pagination__block">
+                <div class="arrow hvr-grow">
+                    <a href="kitchens.html">
+                        <svg class="pagination_arrow" id="left" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23 27L16 20L23 13" stroke="#3A312D" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="arrow_points point_active hvr-grow" id="start"></a>
+                    <a href="#" class="arrow_points" id="one"></a>
+                    <a href="#" class="arrow_points" id="two"></a>
+                    <a href="#" class="arrow_points" id="three"></a>
+                    <a href="#" class="arrow_points" id="finish"></a>
+                    <a href="furniture.html">
+                        <svg class="pagination_arrow" id="right" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 13L23 20L16 27" stroke="#3A312D" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </div>
-                <div>
-                    <label>
-                        <input class="name" type="text" name="name" placeholder="Введите комментарий">
-                    </label>
-                </div>
-                <button class="name" type="submit">
-                    СВЯЗАТЬСЯ
-                </button>
-            </form>
+            </div>
         </div>
     </section>
+{% endblock %}
+{% block popup %}
+
+    <div class="container__pop_up_kitchens pop_up_kitchens" id="pop_up_kitchens">
+        <div class="card__pop_up_kitchens">
+            <button class="btn_pop_up_partners_close" id="close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 19L10 10M10 10L1 1M10 10L19.0001 1M10 10L1 19.0001" stroke="#3A312D" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            
+
+            <div class="jmg_slick_and_deck">
+                <div class="jmg_slick">
+                    <div class=" slider-for" id="slider-for">
+    
+                    </div>
+                    <div class="">
+                        <div class="slider-nav" >
+    
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="deck">
+                    <div class="title" id="productName"></div>
+                    <div class="text2" >
+                        <span>Стиль:&nbsp;</span> <span class='text2' id="productStyle"></span>
+                    </div>
+                    <div class="text2">
+                        <span>Материал фасадов:&nbsp;</span><span id="productFacade_material"></span>
+                    </div>
+                    <div class="text2">
+                        <span>Материал корпуса:&nbsp;</span><span id="productBody_material"></span>
+                    </div>
+                    <div class="text2" >
+                        <span>Столешница:&nbsp;</span><span id="productTable_top"></span>
+                    </div>
+                    <div class="text2" >
+                        <span>Фурнитура:&nbsp;</span><span id="productAccessories"></span>
+                    </div>
+                    <div class="text2">
+                        <span>Цена за погонный метр:&nbsp;</span><span id="productPrice"></span>
+                    </div>
+                    <div class="text2">
+                        Вся мебель изготавливается на заказ.<br>
+                        Срок реализации данного проекта 55 рабочих дней.
+                    </div>
+                </div>
+            </div>
+            <div class="deck_text">
+                <div class="text2" >
+                    <span>Описание:</span>
+                    <span id="productDescription"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container__pop_up_kitchens elements" id="elements">
+        <div class="card__pop_up_kitchens elements_kitchens border-bronze metallic-shine profile-container border-platinum">
+            <button class="btn_pop_up_partners_close" id="close_elements">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 19L10 10M10 10L1 1M10 10L19.0001 1M10 10L1 19.0001" stroke="#3A312D" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="slider-for_elements" id='slider-for-elements'>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    
+{% block static %}
+<script src= {% static "scripts/kitchens.js" %}></script>
+<script src= {% static "scripts/jquery-3.7.1.min.js" %}></script>
+<script src= {% static "scripts/slick.min.js" %}></script>
+
+
 {% endblock %}

@@ -1,59 +1,167 @@
 {% extends "madex/base.html" %}
 {% block content %}
+{% load static %}
 <section class="main">
-    <div class="main__info">
-        <div class="main__info_title">
-            Каждый уголок вашего дома — это отражение вашего стиля и индивидуальности
+    <div class="main__img single-item">
+        <img class="main__info_img " src={% static "img/main/main.png" %} alt="">
+        <img class="main__info_img" src={% static "img/main/main2.png" %} alt="">
+        <img class="main__info_img" src={% static "img/main/test.jpg" %} alt="">
+        <img class="main__info_img" src={% static "img/main/test14.jpg" %} alt="">
+    </div>
+    <!--    Блок для текстов -->
+    <div class="main__info single-item_info_text">
+        <div class="main__info_deck">
+            <div class="main__info_title white ">
+                Каждый уголок вашего дома — это отражение вашего стиля и индивидуальности
+            </div>
+            <div class="main__info_text white">
+                Мы рады представить вам наш салон мебели, где каждая деталь создана с заботой о вашем комфорте
+            </div>
+            <div class="main__info_button button hvr-back-pulse" id="clients_request_button">
+                Связаться
+            </div>
         </div>
-        <div class="main__info_text">
-            Мы рады представить вам наш салон мебели, где каждая деталь создана с заботой о вашем комфорте
+        <!--        Конец блока с текстами-->
+        <div class="main__info_deck">
+            <div class="main__info_title white">
+                Elysian craft cовершенство на заказ
+            </div>
+            <div class="main__info_text white">
+                Мы рады представить вам наш салон мебели, где каждая деталь создана с заботой о вашем комфорте
+            </div>
+            <div class="main__info_button button ">
+                Связаться
+            </div>
         </div>
-        <div class="main__info_button button">
-            Связаться
+        <div class="main__info_deck">
+            <div class="main__info_title white">
+
+            </div>
+            <div class="main__info_text white">
+
+            </div>
+            <!--            <div class="main__info_button button" id="">-->
+            <!--                Связаться-->
+            <!--            </div>-->
+        </div>
+        <div class="main__info_deck">
+            <div class="main__info_title white">
+                Elysian craft cовершенство на заказ
+            </div>
+            <div class="main__info_text white">
+
+            </div>
+            <div class="main__info_button button" id="">
+                Связаться
+            </div>
         </div>
     </div>
 </section>
 <section class="about_us">
     <div class="container_block">
-        <div class="about_us_title title">
+        <div class="about_us_title title animate__animated animate__flip">
             О нас
         </div>
-        <div class="about_us__info">
-            <img class="about_us__info_img" src="static/img/main/about1.png" alt="">
-            <div class="about_us__info_text">
-                <div class="text1">
-                    О бренде
+        <div class="about_us__info fade">
+            <div>
+                <img class="about_us__info_img" src= {% static "img/main/about1.png" %} alt="">
+                <div class="about_us__info_text">
+                    <div class="text1">
+                        О бренде
+                    </div>
+                    <div class="text2">
+                        Название “Elysian Craft” сочетает в себе два ключевых элемента: “Elysian”, что означает
+                        “божественный” или “идеальный”, и “Craft”, что подчеркивает мастерство ручной работы.
+                    </div>
+                    <div class="text3">
+                        Наша цель - улучшить повседневную жизнь потребителя своим продуктом.
+                    </div>
                 </div>
-                <div class="text2">
-                    Название “Elysian Craft” сочетает в себе два ключевых элемента: “Elysian”, что означает
-                    “божественный” или “идеальный”, и “Craft”, что подчеркивает мастерство ручной работы.
+            </div>
+            <div>
+                <img class="about_us__info_img" src= {% static "img/main/about2.jpg" %} alt="">
+                <div class="about_us__info_text">
+                    <div class="text1">
+                        Преимущества
+                    </div>
+                    <div class="text2">
+                        Сервис: мы сделали себе имя благодаря сервису и отношению к клиенту.<br><br>
+                        Всегда исходим из интересов клиентов с точки зрения сроков, исполнения своих обязательств,
+                        финансов.<br><br>
+                        Всегда делаем так, чтобы клиент был доволен.<br><br>
+                        Умеем предлагать лучшее и то, что нужно именно потребителю.<br>
+                    </div>
                 </div>
-                <div class="text3">
-                    Наша цель - улучшить повседневную жизнь потребителя своим продуктом.
+            </div>
+            <div>
+                <img class="about_us__info_img" src={% static "img/main/about3.jpg" %} alt="">
+                <div class="about_us__info_text">
+                    <div class="text1">
+                        Ценности бренда
+                    </div>
+                    <div class="text2">
+                        “Elysian Craft” был основан с одной целью — воплощать в реальность самые смелые мечты клиентов,
+                        создавая мебель, которая выходит за рамки стандартов и времени.
+                    </div>
+                    <div class="text3">
+                        Мы понимаем, что каждый дом уникален, и наши проекты становятся отражением личности и вкусов их
+                        владельцев.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="about_us__info_img" src={% static "img/main/about4.jpg" %} alt="">
+                <div class="about_us__info_text">
+                    <div class="text1">
+                        Философия бренда
+                    </div>
+                    <div class="text2">
+                        Создание уникальной, высококачественной мебели и кухонь, которые олицетворяют утонченность и
+                        совершенство.
+                    </div>
+                    <div class="text3">
+                        Каждая деталь – это история, а каждое пространство – это отражение индивидуальности.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="about_us__info_img" src={% static "img/main/about5.jpg" %} alt="">
+                <div class="about_us__info_text">
+                    <div class="text1">
+                        Достижения бренда
+                    </div>
+                    <div class="text2">
+                        С нами работают крупные клиенты
+                    </div>
+                    <div class="text3">
+                        Низкая текучесть клиента (если мы один раз клиента получили, то с большей долей вероятности он с
+                        нами останется работать).
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <section class="services">
     <div class="container_block">
         <div class="title">
             Услуги
         </div>
         <div class="services__sections">
-            <div class="kitchens">
-                <img src="static/img/main/kitchens.png" alt="kitchens">
-                <a class="services__sections_button" href="{% url "madex:all_kitchens" %}">
+            <div class="kitchens ">
+                <img src= {% static "img/main/kitchens.png" %} alt="kitchens">
+                <a class="services__sections_button " href="kitchens.html">
                     Кухни
-                    <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="hvr-bounce-out" width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
                               fill="#3A312D"/>
                     </svg>
                 </a>
             </div>
             <div class="furniture">
-                <img src="static/img/main/furniture.png" alt="furniture">
-                <a class="services__sections_button" href="{% url "madex:all_furniture" %}">
+                <img src={% static "img/main/furniture.png" %} alt="furniture">
+                <a class="services__sections_button" href="furniture.html">
                     Мебель
                     <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
@@ -62,8 +170,8 @@
                 </a>
             </div>
             <div class="doors">
-                <img src="static/img/main/doors.png" alt="doors">
-                <a class="services__sections_button" href="/doors.html">
+                <img src={% static "img/main/doors.png" %} alt="doors">
+                <a class="services__sections_button" href="doors.html">
                     Двери
                     <svg width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M107.707 17.2071C108.098 16.8166 108.098 16.1834 107.707 15.7929L101.343 9.42893C100.953 9.03841 100.319 9.03841 99.9289 9.42893C99.5384 9.81946 99.5384 10.4526 99.9289 10.8431L105.586 16.5L99.9289 22.1569C99.5384 22.5474 99.5384 23.1805 99.9289 23.5711C100.319 23.9616 100.953 23.9616 101.343 23.5711L107.707 17.2071ZM0 17.5L107 17.5V15.5L0 15.5L0 17.5Z"
@@ -74,32 +182,57 @@
         </div>
     </div>
 </section>
-<sections class="completed_projects">
+<section class="about_us completed_projects">
     <div class="container_block">
         <div class="title">
             Реализованные проекты
         </div>
-        <div class="about_us__info">
-            <img class="about_us__info_img" src="static/img/main/completed_projects1.png" alt="ompleted_projects1">
-            <div class="about_us__info_text">
-                <img src="static/img/main/ompleted_projects2.png" alt="">
+        <div class="about_us__info fade">
+
+            <div>
+                <img class="about_us__info_img" src={% static "img/main/completed_projects1.png" %} alt="completed_projects1">
+                <div class="about_us__info_text w-h">
+                    <img src= {% static "img/main/completed_projects2.png" %} alt="">
+                </div>
             </div>
+
+            <div>
+                <img class="about_us__info_img" src={% static "img/main/completed_projects2.png" %} alt="completed_projects2">
+                <div class="about_us__info_text w-h">
+                    <img src= {% static "img/main/completed_projects3.png" %} alt="">
+                </div>
+            </div>
+
+            <div>
+                <img class="about_us__info_img" src= {% static "img/main/completed_projects3.png" %} alt="completed_projects3">
+                <div class="about_us__info_text w-h">
+                    <img src= {% static "img/main/completed_projects4.png" %} alt="">
+                </div>
+            </div>
+
+            <div>
+                <img class="about_us__info_img" src= {% static "img/main/completed_projects4.png" %} alt="completed_projects3">
+                <div class="about_us__info_text w-h">
+                    <img src= {% static "img/main/completed_projects1.png" %} alt="">
+                </div>
+            </div>
+            <div class="about_us__info_img">
+                <img class="" src= {% static "img/main/completed_projects1.png" %} alt="completed_projects3">
+                <div class="about_us__info_text w-h">
+                    <img src={% static "img/main/completed_projects2.png" %} alt="">
+                </div>
+            </div>
+
         </div>
     </div>
-</sections>
+</section>
 <sections class="partners">
     <div class="container_block">
         <div class="title">
             Партнеры
         </div>
-        <div class="partners__items">
-            <div class="partners__items_symbol">
-                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 15L1 8L8 1" stroke="#3A312D" stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                </svg>
-            </div>
-            <div class="svg">
+        <div class="responsive">
+            <div class="svg hvr-buzz-out">
                 <svg width="200" height="70" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
                     <rect x="1" y="1" width="198" height="68" fill="#FEFEFE"/>
@@ -114,7 +247,7 @@
                     </defs>
                 </svg>
             </div>
-            <div>
+            <div class="svg">
                 <svg width="200" height="70" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_450_528)">
                         <path d="M0 -7H200V93H0V-7Z" fill="#FEFEFE"/>
@@ -273,13 +406,132 @@
                           fill="#3A312D"/>
                 </svg>
             </div>
-            <div class="partners__items_symbol">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 5L16 12L9 19" stroke="#3A312D" stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                </svg>
-            </div>
         </div>
     </div>
 </sections>
+{% endblock %}
+{% block popup %}
+<div class="container__pop_up_partners" id="container__pop_up_partners">
+    <div class="pop_up_partners">
+        <div class="pop_up_partners_text">
+            <button class="btn_pop_up_partners_close" id="partners_close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 19L10 10M10 10L1 1M10 10L19.0001 1M10 10L1 19.0001" stroke="#3A312D" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="pop_up_title title ">
+                Хотите стать нашим партнером?
+            </div>
+            <div class="pop_up_description text3">
+                Профессиональное сотрудничество с архитекторами и дизайнерами: создаем уникальные интерьеры и мебель на
+                заказ.<br>
+                В современном мире требуется индивидуальный подход к каждому проекту.<br>
+                Если вы архитектор, дизайнер или управляете салоном мебели, приглашаем вас к
+                сотрудничеству!<br>
+                Мы специализируемся на производстве мебели под заказ и оформлении интерьеров, помогая вам реализовывать
+                самые смелые идеи.<br>
+            </div>
+        </div>
+        <div class="background_form_partners">
+            <div class="pop_up_description text3 white">
+                Если вас заинтересовала наша продукция и вы хотите обсудить детали партнерства, не стесняйтесь
+                обращаться к нам!<br>
+                Мы с удовольствием ответим на все ваши вопросы.<br>
+                Давайте создадим что-то удивительное вместе!<br>
+            </div>
+            <div class="form1">
+                <!--                action="https://webhook.site/3f8522b7-9cd0-4537-9858-110d8bc5cec0" method="post"-->
+                <form>
+                    <div class="input_info">
+                        <label>
+                            <input type="text" name="name" placeholder="Введите имя">
+                        </label>
+                        <label>
+                            <input type="tel" name="phone" placeholder="Введите телефон">
+                        </label>
+                        <label>
+                            <input type="email" name="email" placeholder="Введите email">
+                        </label>
+                    </div>
+                    <div>
+                        <label class="">
+                            <input class="name form_comment_partners" type="text" name="name"
+                                placeholder="Введите комментарий">
+                        </label>
+                    </div>
+                    <button class="name_button form_comment_partners" type="" id="button__pop_up_thanks">
+                        СВЯЗАТЬСЯ
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container__pop_up_partners thanks" id="container__pop_up_thanks">
+    <div class="pop_up_partners">
+        <div class="pop_up_partners_text pop_up_partners_thanks">
+            <button class="btn_pop_up_partners_close" id="thanks_close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 19L10 10M10 10L1 1M10 10L19.0001 1M10 10L1 19.0001" stroke="#3A312D" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="pop_up_title title">
+                Спасибо!
+            </div>
+            <div class="pop_up_description text3">
+                Ваша заявка принята, мы свяжемся с вами в ближайшее время.
+            </div>
+            <img src={% static "img/partners/2.png" %} alt="">
+        </div>
+    </div>
+</div>
+
+<div class="container__pop_up_partners clients_request" id="clients_request">
+    <div class="pop_up_partners">
+        <div class="pop_up_partners_text clients_request_text">
+            <button class="btn_pop_up_partners_close" id="clients_request_close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 19L10 10M10 10L1 1M10 10L19.0001 1M10 10L1 19.0001" stroke="#3A312D" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="pop_up_title title clients_request_title">
+                Оставьте заявку для личной консультации
+            </div>
+            <div class="clients_request_form">
+                <form>
+                    <div class="input_info clients_request_info">
+                        <label>
+                            <input class="clients_request_name"
+                                type="text" name="name" placeholder="Введите имя">
+                        </label>
+                        <label>
+                            <input class="clients_request_name" type="tel" name="phone" placeholder="Введите телефон">
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input class="name clients_request_name" type="text" name="name"
+                                placeholder="Введите комментарий" id="clients_request_name">
+                        </label>
+                    </div>
+                    <button class="name_button clients_request_name center" type="">
+                        СВЯЗАТЬСЯ
+                    </button>
+                </form>
+                <div class="clients_request_img">
+                    <img src={% static "img/partners/2.png" %} alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block static %}
+<script src={% static "scripts/jquery-3.7.1.min.js" %}></script>
+<script src={% static "scripts/slick.min.js" %}></script>
+<script src={% static "scripts/index.js" %}></script>
 {% endblock %}

@@ -13,3 +13,70 @@
 .furniture__button_text {
     height: 66px;
 }
+
+.card__pop_up_kitchens {
+   align-items: start;
+}
+
+.jmg_slick_and_deck {
+    column-gap: 40px;
+}
+
+.jmg_slick_furniture {
+    width: 421px;
+    height: 512px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+.slider-for_img_furniture {
+    width: 421px;
+    height: 512px;
+    margin-bottom: 10px;
+}
+
+.slider-nav_furniture {
+    width: 68px;
+    height: 499px;
+    margin-top: 40px;
+}
+
+.slider-nav_img_furniture {
+    margin-bottom: 10px;
+}
+
+.slider-for_furniture {
+    width: 333px;
+    height: 499px;
+    margin-left: 30px;
+}
+
+.slider-nav_furniture .slick-arrow {
+    top: -6%;
+    left: 27%;
+    transform: rotate(90deg);
+}
+
+.slider-nav_furniture .slick-next {
+    top: 90%;
+    left: 27%;
+}
+
+.deck {
+    max-width: 480px;
+    gap: 40px;
+}
+
+.slider-for_elements .slick-arrow {
+    z-index: -2;
+}
+
+#elements_furniture .card__pop_up_kitchens {
+    align-items: center;
+    height: 640px;
+}
+
+#elements_furniture  {
+    background: linear-gradient(transparent 0%, rgb(0, 0, 0, 0.89) 0);
+}

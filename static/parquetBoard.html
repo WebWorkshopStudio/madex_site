@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>parquetBoard</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleKitchens.css">
+    <link rel="stylesheet" href="css/styleParquetBoard.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<section class="main_header">
+    <header class="header">
+        <div class="container container_header">
+            <div class="logo">
+                <a href="index.html">
+                    <svg width="223" height="50" viewBox="0 0 223 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M76.2457 8.79127V7.80701H58.0454V24.9558H76.2457V23.8304H60.5543V16.9441H73.7368V15.7305H60.5543V8.71719L76.2457 8.79127Z"
+                              fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M84.382 7.80701V24.9558H103.521V23.8304H87.0929V7.80701H84.382Z" fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M105.609 7.80701L116.066 17.6955V24.9558H118.423V17.6955L129.039 7.80701H126.74L117.65 16.549L109.025 7.80701H105.609Z"
+                              fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M150.666 10.1566V8.45616C146.531 7.10147 134.677 6.27596 134.677 12.3121C134.677 12.7143 134.794 14.8874 139.011 16.0163C143.228 17.1417 150.284 18.6692 149.501 21.0364C148.03 25.4674 139.833 24.5078 137.767 23.5941C135.273 22.4899 134.699 22.1054 134.699 22.1054V23.8305C137.53 26.0883 151.577 26.4869 151.978 20.8389C152.297 16.3056 145.234 15.8893 141.641 14.831C130.177 11.4619 142.137 5.03769 150.666 10.1566Z"
+                              fill="#3A312D"/>
+                        <path d="M162.807 7.80701H160.273V24.9558H162.807V7.80701Z" fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M169.778 24.9558L180.561 7.80701H183.47L194.034 24.9558H191.1L188.524 20.6025H174.324L171.875 24.9558H169.778ZM181.465 9.21814L174.958 19.5441H187.815L181.465 9.21814Z"
+                              fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M202.755 24.9558H200.983V7.80701H202.755L220.321 21.7243V7.80701H221.944V24.9558L202.755 10.0825V24.9558Z"
+                              fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M70.0549 33.7436L71.0826 32.9075C66.1852 30.1135 56.5216 32.516 58.251 38.3969C59.1688 41.526 62.2589 42.1928 64.9769 42.5703C67.6949 42.9478 71.2811 41.078 71.2811 41.078L69.8919 40.5347C64.6579 44.0414 56.511 39.3564 60.6394 34.608C63.6905 31.1013 68.7473 32.7841 70.0549 33.7436Z"
+                              fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M81.9121 31.9656H86.5189C93.0144 31.9656 92.979 37.8218 87.0752 37.9064L91.6289 42.3833H90.0094L85.6507 37.9064H83.2374V42.3833H81.9157V31.9656H81.9121ZM83.2339 32.6888V37.3138H86.9937C89.0951 37.3138 89.9775 35.8779 89.9811 35.0242C89.9881 33.7401 88.7408 32.6429 87.0504 32.657L83.2339 32.6888Z"
+                              fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M101.991 42.3868L108.543 31.9656H110.311L116.729 42.3868H114.946L113.38 39.7409H104.751L103.263 42.3868H101.991ZM109.096 32.8228L105.144 39.0953H112.958L109.096 32.8228Z"
+                              fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M129.369 42.3868H127.906V31.9656H137.509V32.8511H129.369V37.3138H136.768V37.9064H129.369V42.3868Z"
+                              fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M148.172 31.9656H160.408V32.8123H154.866V42.3868H153.604V32.8123H148.172V31.9656Z"
+                              fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M13.2427 23.7388C12.1158 23.767 11.0492 24.0175 10.0924 24.4443V31.3377H47.1238V29.2775H13.2463V23.7388H13.2427Z"
+                              fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0889 7.80701V18.006C11.0953 17.7696 12.1548 17.6285 13.2392 17.6073V9.82846H47.1167V7.80701H10.0889Z"
+                              fill="#3A312D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M4.10357 30.8578C4.10357 26.0388 9.42972 21.7772 13.8203 21.6608C13.9302 21.6502 14.0294 21.6502 14.1393 21.6502H34.93C37.3255 21.6502 39.4872 22.6133 41.0535 24.1726L42.7084 22.5357C40.5645 20.4119 37.6019 19.089 34.3489 19.089H13.5616C13.4518 19.089 13.3526 19.089 13.2427 19.0996C12.1548 19.1207 11.0988 19.2795 10.0924 19.5476C4.86192 20.9376 0.953247 25.4144 0.953247 30.8578C0.953247 37.4408 6.69755 42.6161 13.5616 42.6161H39.9762V40.1784H13.5616C8.24613 40.1749 4.10357 35.5146 4.10357 30.8578Z"
+                              fill="#3A312D"/>
+                    </svg>
+                </a>
+            </div>
+            <nav class="menu">
+                <ul class="menu_list">
+                    <li>
+                        <a class="menu_link" href="kitchens.html">
+                            КУХНИ
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu_link" href="furniture.html">
+                            МЕБЕЛЬ
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu_link" href="doors.html">
+                            ДВЕРИ
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu_link" href="parquetBoard.html">
+                            ПАРКЕТНАЯ ДОСКА
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu_link" href="#" id="partners">
+                            Партнерам
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu_link" href="#contacts">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="phone">
+                +7 (909) 916-56-82
+            </div>
+        </div>
+    </header>
+</section>
+<section class="href">
+    <div class="container_block">
+        <div class="href__main">
+            <a href="index.html">Главная&nbsp;</a>
+            <svg width="5" height="12" viewBox="0 0 5 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.992 0.48L1.92 12H0.96L4.032 0.48H4.992Z" fill="#3A312D"/>
+            </svg>
+            <a href="#">&nbsp;Паркетная доска</a>
+        </div>
+        <div class="title">
+            Паркетная доска
+        </div>
+        <div class="text2 ">
+            Паркетная доска – современное напольное покрытие, которое пришло на смену классическому паркету.<br>
+            Наша команда профессионалов поможет подобрать идеальное покрытие для вашего пола!
+        </div>
+    </div>
+</section>
+<section class="about_us">
+    <div class="container_block">
+        <div class="about_us__info fade">
+            <div>
+                <img class="about_us__info_img hvr-grow" src="img/parquetBoard/main_board.png" alt="">
+                <div class="about_us__info_text">
+                    <div class="text3">
+                        Мы рады предложить вам три вида напольной паркетной доски:
+                    </div>
+                    <div class="text3 list">
+                        <div class="list_advantages ">
+                            инженерная;
+                        </div>
+                        <div class="list_advantages">
+                            техно-массив;
+                        </div>
+                        <div class="list_advantages">
+                            массивная;
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img class="about_us__info_img" src="img/parquetBoard/main_board2.jpg" alt="">
+                <div class="about_us__info_text">
+                    <div class="text3">
+                        Отличительной чертой паркетной доски является эксклюзивная ручная отделка.<br><br>
+                        Каждый этап производства — от отбора натуральной древесины до нанесения финального покрытия —
+                        осуществляется вручную, что делает каждую доску неповторимой.
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img class="about_us__info_img" src="img/parquetBoard/main_board3.jpg" alt="">
+                <div class="about_us__info_text">
+                    <div class="text3">
+                        В процессе окрашивания используются различные технологии отделки: браширование, искусственное
+                        старение, патинирование и нанесение эмали.<br><br>
+                        Вы можете выбрать цвет, который будет гармонировать с вашими дверями, мебелью или создать
+                        собственный уникальный вариант, используя палитру RAL и CMYK.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="info__price">
+    <div class="container_block">
+        <div class="title">
+            Цена
+        </div>
+        <div class="title price">
+            <div class="">
+                Инженерная
+                <div class="text3">
+                    от <span class="title wow animate__animated animate__flip">5450*</span> руб./кв.м.
+                </div>
+            </div>
+            <div class="">
+                Техно-массив
+                <div class="text3">
+                    от <span class="title wow animate__animated animate__flip">6930*</span> руб./кв.м.
+                </div>
+            </div>
+            <div class="">
+                Массивная
+                <div class="text3">
+                    от <span class="title wow animate__animated animate__flip">8470*</span> руб./кв.м.
+                </div>
+            </div>
+        </div>
+        <div class="text2">
+            <div class="absolute">*</div>
+            Цена указана за 1 кв. м.<br>
+            Цена изделия может изменяться в зависимости от выбранного Вами массива дерева.
+        </div>
+    </div>
+</section>
+<sections class="catalog">
+    <div class="container_block">
+        <div class="title">
+            Каталог
+        </div>
+        <div class="boards__items">
+            <div class="boards__item item1">
+                <img src="img/parquetBoard/1.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 1
+                </div>
+            </div>
+            <div class="boards__item hvr-grow">
+                <img src="img/parquetBoard/2.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 2
+                </div>
+            </div>
+            <div class="boards__item item3">
+                <img src="img/parquetBoard/3.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 3
+                </div>
+            </div>
+            <div class="boards__item item4">
+                <img src="img/parquetBoard/4.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 4
+                </div>
+            </div>
+            <div class="boards__item item5">
+                <img src="img/parquetBoard/5.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 5
+                </div>
+            </div>
+            <div class="boards__item item6">
+                <img src="img/parquetBoard/6.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 6
+                </div>
+            </div>
+            <div class="boards__item item7">
+                <img src="img/parquetBoard/7.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 7
+                </div>
+            </div>
+            <div class="boards__item">
+                <img src="img/parquetBoard/8.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 8
+                </div>
+            </div>
+            <div class="boards__item">
+                <img src="img/parquetBoard/9.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 9
+                </div>
+            </div>
+            <div class="boards__item">
+                <img src="img/parquetBoard/10.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 10
+                </div>
+            </div>
+            <div class="boards__item">
+                <img src="img/parquetBoard/11.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 11
+                </div>
+            </div>
+            <div class="boards__item">
+                <img src="img/parquetBoard/12.png" alt="">
+                <div class="boards__item_text">
+                    Паркетная доска 12
+                </div>
+            </div>
+        </div>
+    </div>
+</sections>
+<section class="form">
+    <div class="form__title">
+        Оставьте заявку для личной консультации
+    </div>
+    <div class="form1">
+        <form action="https://webhook.site/3f8522b7-9cd0-4537-9858-110d8bc5cec0" method="post">
+            <div class="input_info">
+                <label>
+                    <input type="text" name="name" placeholder="Введите имя">
+                </label>
+                <label>
+                    <input type="tel" name="phone" placeholder="Введите телефон">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input class="name" type="text" name="name" placeholder="Введите комментарий">
+                </label>
+            </div>
+            <button class="name_button" type="submit">
+                СВЯЗАТЬСЯ
+            </button>
+        </form>
+    </div>
+</section>
+<footer>
+    <div class="contacts" id="contacts">
+        <div class="logo">
+            <a href="index.html">
+                <svg width="223" height="50" viewBox="0 0 223 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M76.2457 8.79127V7.80701H58.0454V24.9558H76.2457V23.8304H60.5543V16.9441H73.7368V15.7305H60.5543V8.71719L76.2457 8.79127Z"
+                          fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M84.382 7.80701V24.9558H103.521V23.8304H87.0929V7.80701H84.382Z" fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M105.609 7.80701L116.066 17.6955V24.9558H118.423V17.6955L129.039 7.80701H126.74L117.65 16.549L109.025 7.80701H105.609Z"
+                          fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M150.666 10.1566V8.45616C146.531 7.10147 134.677 6.27596 134.677 12.3121C134.677 12.7143 134.794 14.8874 139.011 16.0163C143.228 17.1417 150.284 18.6692 149.501 21.0364C148.03 25.4674 139.833 24.5078 137.767 23.5941C135.273 22.4899 134.699 22.1054 134.699 22.1054V23.8305C137.53 26.0883 151.577 26.4869 151.978 20.8389C152.297 16.3056 145.234 15.8893 141.641 14.831C130.177 11.4619 142.137 5.03769 150.666 10.1566Z"
+                          fill="#3A312D"/>
+                    <path d="M162.807 7.80701H160.273V24.9558H162.807V7.80701Z" fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M169.778 24.9558L180.561 7.80701H183.47L194.034 24.9558H191.1L188.524 20.6025H174.324L171.875 24.9558H169.778ZM181.465 9.21814L174.958 19.5441H187.815L181.465 9.21814Z"
+                          fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M202.755 24.9558H200.983V7.80701H202.755L220.321 21.7243V7.80701H221.944V24.9558L202.755 10.0825V24.9558Z"
+                          fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M70.0549 33.7436L71.0826 32.9075C66.1852 30.1135 56.5216 32.516 58.251 38.3969C59.1688 41.526 62.2589 42.1928 64.9769 42.5703C67.6949 42.9478 71.2811 41.078 71.2811 41.078L69.8919 40.5347C64.6579 44.0414 56.511 39.3564 60.6394 34.608C63.6905 31.1013 68.7473 32.7841 70.0549 33.7436Z"
+                          fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M81.9121 31.9656H86.5189C93.0144 31.9656 92.979 37.8218 87.0752 37.9064L91.6289 42.3833H90.0094L85.6507 37.9064H83.2374V42.3833H81.9157V31.9656H81.9121ZM83.2339 32.6888V37.3138H86.9937C89.0951 37.3138 89.9775 35.8779 89.9811 35.0242C89.9881 33.7401 88.7408 32.6429 87.0504 32.657L83.2339 32.6888Z"
+                          fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M101.991 42.3868L108.543 31.9656H110.311L116.729 42.3868H114.946L113.38 39.7409H104.751L103.263 42.3868H101.991ZM109.096 32.8228L105.144 39.0953H112.958L109.096 32.8228Z"
+                          fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M129.369 42.3868H127.906V31.9656H137.509V32.8511H129.369V37.3138H136.768V37.9064H129.369V42.3868Z"
+                          fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M148.172 31.9656H160.408V32.8123H154.866V42.3868H153.604V32.8123H148.172V31.9656Z"
+                          fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M13.2427 23.7388C12.1158 23.767 11.0492 24.0175 10.0924 24.4443V31.3377H47.1238V29.2775H13.2463V23.7388H13.2427Z"
+                          fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M10.0889 7.80701V18.006C11.0953 17.7696 12.1548 17.6285 13.2392 17.6073V9.82846H47.1167V7.80701H10.0889Z"
+                          fill="#3A312D"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4.10357 30.8578C4.10357 26.0388 9.42972 21.7772 13.8203 21.6608C13.9302 21.6502 14.0294 21.6502 14.1393 21.6502H34.93C37.3255 21.6502 39.4872 22.6133 41.0535 24.1726L42.7084 22.5357C40.5645 20.4119 37.6019 19.089 34.3489 19.089H13.5616C13.4518 19.089 13.3526 19.089 13.2427 19.0996C12.1548 19.1207 11.0988 19.2795 10.0924 19.5476C4.86192 20.9376 0.953247 25.4144 0.953247 30.8578C0.953247 37.4408 6.69755 42.6161 13.5616 42.6161H39.9762V40.1784H13.5616C8.24613 40.1749 4.10357 35.5146 4.10357 30.8578Z"
+                          fill="#3A312D"/>
+                </svg>
+            </a>
+        </div>
+        <div class="address">
+            <div class="address__svg">
+                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7.92285C1 12.7747 5.24448 16.7869 7.12319 18.3252C7.39206 18.5454 7.52811 18.6568 7.72871 18.7132C7.88491 18.7572 8.1148 18.7572 8.271 18.7132C8.47197 18.6567 8.60707 18.5463 8.87695 18.3254C10.7557 16.7871 14.9999 12.7751 14.9999 7.9233C14.9999 6.08718 14.2625 4.32605 12.9497 3.02772C11.637 1.72939 9.8566 1 8.00008 1C6.14357 1 4.36301 1.7295 3.05025 3.02783C1.7375 4.32616 1 6.08674 1 7.92285Z"
+                          stroke="#3A312D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 7C6 8.10457 6.89543 9 8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7Z"
+                          stroke="#3A312D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="address__text">
+                Москва «MADEX Экспо Дизайн Центр».<br>
+                Рябиновая ул. 41, корп.1. Цокольный этаж пом.11 и 2 этаж, пом. 2-19, 2-20
+            </div>
+        </div>
+        <div class="address__text_metro">
+            <div class="symbol_metro">
+                <svg width="27" height="19" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.6183 0.598634L18.3941 0.59826L13.6309 9.9321L8.6962 0.518555L1.9399 17.5244H0.193848V18.8902H9.75932V17.5244H7.86134L9.75932 12.2095L13.6309 18.8902L17.3508 12.2095L19.2484 17.5244H17.3508V18.8902H26.84V17.5244H25.1961L18.6183 0.598634Z"
+                          fill="#3A312D"/>
+                </svg>
+            </div>
+            <div class="circle_light_blue">
+                Давыдково
+            </div>
+            <div class="blue">
+
+            </div>
+            <div class="circle_light_blue two">
+                Кунцевская
+            </div>
+        </div>
+        <div class="address__working_hours">
+            <div class="symbol_clock">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 5V10H15M10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 14.9706 14.9706 19 10 19Z"
+                          stroke="#3A312D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="working_hours">
+                ПН - ПТ 11:00 - 19:00
+            </div>
+            <div class="working_hours">
+                СБ - ВС 11:00 - 18:00
+            </div>
+        </div>
+        <div class="address__working_email">
+            <a class="symbol_email"
+               href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=3f8522b7-9cd0-4537-9858-110d8bc5cec0@emailhook.site">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2L8.10764 6.61227L8.10967 6.61396C8.78785 7.11128 9.12714 7.3601 9.49876 7.45621C9.82723 7.54117 10.1725 7.54117 10.501 7.45621C10.8729 7.36001 11.2132 7.11047 11.8926 6.61227C11.8926 6.61227 15.8101 3.60594 18 2M1 11.8002V4.2002C1 3.08009 1 2.51962 1.21799 2.0918C1.40973 1.71547 1.71547 1.40973 2.0918 1.21799C2.51962 1 3.08009 1 4.2002 1H15.8002C16.9203 1 17.4796 1 17.9074 1.21799C18.2837 1.40973 18.5905 1.71547 18.7822 2.0918C19 2.5192 19 3.07899 19 4.19691V11.8036C19 12.9215 19 13.4805 18.7822 13.9079C18.5905 14.2842 18.2837 14.5905 17.9074 14.7822C17.48 15 16.921 15 15.8031 15H4.19691C3.07899 15 2.5192 15 2.0918 14.7822C1.71547 14.5905 1.40973 14.2842 1.21799 13.9079C1 13.4801 1 12.9203 1 11.8002Z"
+                          stroke="#3A312D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <a class="working_email"
+               href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=3f8522b7-9cd0-4537-9858-110d8bc5cec0@emailhook.site">
+                email.com
+            </a>
+        </div>
+        <div class="address__working_phone">
+            <div class="symbol_phone">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.7349 17.6978C11.4706 17.6978 8.00117 14.2262 8 9.96058C8.00117 8.87929 8.88136 8 9.96 8C10.0709 8 10.1806 8.00934 10.2857 8.02802C10.5168 8.06656 10.7363 8.1448 10.9383 8.26273C10.9674 8.28025 10.9873 8.30829 10.9919 8.34099L11.4425 11.182C11.4484 11.2159 11.4379 11.2486 11.4157 11.2731C11.1671 11.5487 10.8495 11.7472 10.4958 11.8464L10.3254 11.8943L10.3896 12.0589C10.9709 13.5396 12.1546 14.7225 13.636 15.3063L13.8006 15.3717L13.8485 15.2013C13.9477 14.8474 14.1462 14.5298 14.4217 14.2811C14.4415 14.2624 14.4684 14.2531 14.4952 14.2531C14.501 14.2531 14.5069 14.2531 14.5139 14.2542L17.3541 14.705C17.3879 14.7108 17.4159 14.7295 17.4335 14.7587C17.5502 14.9607 17.6284 15.1814 17.6681 15.4126C17.6868 15.5154 17.6949 15.624 17.6949 15.7372C17.6949 16.8173 16.8159 17.6966 15.7349 17.6978Z"
+                          fill="#3A312D"/>
+                    <path d="M22.6639 11.5635C22.4339 8.96419 21.2432 6.55289 19.3112 4.77447C17.3676 2.98554 14.8461 2 12.209 2C6.42123 2 1.7121 6.71052 1.7121 12.5C1.7121 14.4431 2.24791 16.3359 3.26235 17.9847L1 22.9942L8.24348 22.2223C9.50307 22.7384 10.8362 23 12.2078 23C12.5686 23 12.9386 22.9813 13.3098 22.9428C13.6367 22.9078 13.9671 22.8564 14.2916 22.791C19.1385 21.8113 22.6767 17.5083 22.7048 12.556V12.5C22.7048 12.1847 22.6908 11.8694 22.6627 11.5647L22.6639 11.5635ZM8.52249 20.0235L4.51494 20.4509L5.71148 17.7991L5.47217 17.4779C5.45466 17.4546 5.43715 17.4312 5.41731 17.4044C4.37836 15.9693 3.82968 14.2737 3.82968 12.5012C3.82968 7.87939 7.58859 4.11937 12.209 4.11937C16.5376 4.11937 20.2066 7.49756 20.5603 11.8099C20.579 12.0411 20.5895 12.2735 20.5895 12.5023C20.5895 12.5677 20.5883 12.6319 20.5872 12.7008C20.4984 16.5671 17.7983 19.8507 14.0208 20.6868C13.7324 20.751 13.4371 20.8001 13.1429 20.8316C12.837 20.8666 12.523 20.8841 12.2113 20.8841C11.1012 20.8841 10.0225 20.6693 9.00344 20.2442C8.8902 20.1987 8.7793 20.1496 8.6754 20.0994L8.52365 20.0259L8.52249 20.0235Z"
+                          fill="#3A312D"/>
+                </svg>
+            </div>
+            <div class="working_phone">
+                +7 (909) 916-56-82
+            </div>
+            <div class="working_phone">
+                +7 (966) 333-03-32
+            </div>
+        </div>
+    </div>
+    <div class="map">
+        <div style="position:relative;overflow:hidden;">
+            <a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+               style="color:#eee;font-size:12px;position:absolute;top:0px;">
+                Москва
+            </a>
+            <a href="https://yandex.ru/maps/213/moscow/house/ryabinovaya_ulitsa_41k1/Z04YcgVjS0QEQFtvfXtxc3xmbQ==/?l=masstransit&ll=37.421918%2C55.701401&tilt=0.8726646259971648&utm_medium=mapframe&utm_source=maps&z=16.5"
+               style="color:#eee;font-size:12px;position:absolute;top:14px;">
+                Рябиновая улица, 41к1 — Яндекс Карты
+            </a>
+            <iframe src="https://yandex.ru/map-widget/v1/?l=masstransit&ll=37.421918%2C55.701401&mode=whatshere&tilt=0.8726646259971648&whatshere%5Bpoint%5D=37.421712%2C55.701665&whatshere%5Bzoom%5D=17&z=16.5"
+                    width="560" height="444" frameborder="1" allowfullscreen="true" style="position:relative;">
+            </iframe>
+        </div>
+    </div>
+</footer>
+
+<div class="container__pop_up_partners" id="container__pop_up_partners">
+    <div class="pop_up_partners">
+        <div class="pop_up_partners_text">
+            <button class="btn_pop_up_partners_close" id="partners_close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 19L10 10M10 10L1 1M10 10L19.0001 1M10 10L1 19.0001" stroke="#3A312D" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="pop_up_title title ">
+                Хотите стать нашим партнером?
+            </div>
+            <div class="pop_up_description text3">
+                Профессиональное сотрудничество с архитекторами и дизайнерами: создаем уникальные интерьеры и мебель на
+                заказ.<br>
+                В современном мире требуется индивидуальный подход к каждому проекту.<br>
+                Если вы архитектор, дизайнер или управляете салоном мебели, приглашаем вас к
+                сотрудничеству!<br>
+                Мы специализируемся на производстве мебели под заказ и оформлении интерьеров, помогая вам реализовывать
+                самые смелые идеи.<br>
+            </div>
+        </div>
+        <div class="background_form_partners">
+            <div class="pop_up_description text3 white">
+                Если вас заинтересовала наша продукция и вы хотите обсудить детали партнерства, не стесняйтесь
+                обращаться к нам!<br>
+                Мы с удовольствием ответим на все ваши вопросы.<br>
+                Давайте создадим что-то удивительное вместе!<br>
+            </div>
+            <div class="form1">
+                <form action="https://webhook.site/3f8522b7-9cd0-4537-9858-110d8bc5cec0" method="post">
+                    <div class="input_info">
+                        <label>
+                            <input type="text" name="name" placeholder="Введите имя">
+                        </label>
+                        <label>
+                            <input type="tel" name="phone" placeholder="Введите телефон">
+                        </label>
+                        <label>
+                            <input type="email" name="email" placeholder="Введите email">
+                        </label>
+                    </div>
+                    <div>
+                        <label class="">
+                            <input class="name form_comment_partners" type="text" name="name"
+                                   placeholder="Введите комментарий">
+                        </label>
+                    </div>
+                    <button class="name_button form_comment_partners" type="submit">
+                        СВЯЗАТЬСЯ
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/jquery-3.7.1.min.js"></script>
+<script src="scripts/wow.min.js"></script>
+<script src=scripts/slick.min.js></script>
+<script src="scripts/index.js"></script>
+</body>
+</html>
